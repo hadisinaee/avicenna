@@ -3,10 +3,9 @@ A minimal academic page for academics built with Hugo.
 
 > This theme hugely benefits from `Ezhil Theme`. I just made some changes to create `avicenna`.
 
-<!-- # Demo -->
-<!-- [View demo](https://ezhil-hugo.netlify.com/) -->
+# Screenshot
 
-<!-- ![Screenshot](images/screenshot.png "Avicenna") -->
+![Screenshot](images/screenshot.png "Avicenna")
 
 # Features
 * Minimal, Responsive, and Clean
@@ -20,6 +19,10 @@ A minimal academic page for academics built with Hugo.
 # How To Install `Avicenna`?
 > I assume that you know to start with `Hugo`. If you do not know how to run a website with `Hugo`, please read its [quick start](https://gohugo.io/getting-started/quick-start/).
 
+See the full setup in ~70 seconds:
+[![asciicast](https://asciinema.org/a/7ZReSH0ws7HVbI1c6UUN7wzfd.svg)](https://asciinema.org/a/7ZReSH0ws7HVbI1c6UUN7wzfd)
+
+Or simply follow the instructions:
 ```bash
 # creates a static site
 $ hugo new site my-academic-page
@@ -34,7 +37,11 @@ $ hugo server
 
 # Sample Configuration
 
-To kick start, copy the following configuration and paste it in `config.toml` file in your root directory. Then, start changing any part of it. Make sure you have your profile picture under `static` folder named `profile.jpg`
+To kick start, copy the following configuration and paste it in `config.toml` file in your root directory.
+
+__IMPORTANT__
+ - copy your profile picture named `profile.jpg` in the `static` folder
+ - copy your CV file in the `static` folder. Set the `cv_name` variable to your its full file name.
 
 ```toml
 baseURL = "https://example.edu"
