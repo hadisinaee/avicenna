@@ -6,7 +6,6 @@ googleAnalytics = "UA-1234-6"
 timeout=3000
 
 [params]
-  profile_image="profile_bw.jpg"
   subtitle= "PhD Student"
   interests="Deep Reinforcement Learning, Machine Learning "
   cv_name= "HadiSinaee_CV.pdf"
