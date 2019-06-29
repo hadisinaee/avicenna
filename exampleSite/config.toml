@@ -1,47 +1,15 @@
-# Avicenna Theme
-A minimal academic page for academics built with Hugo.
-
-> This theme hugely benefits from `Ezhil Theme`. I just made some changes to create `avicenna`.
-
-<!-- # Demo -->
-<!-- [View demo](https://ezhil-hugo.netlify.com/) -->
-
-<!-- ![Screenshot](images/screenshot.png "Avicenna") -->
-
-# Features
-* Minimal, Responsive, and Clean
-* Single File Configuration
-* Supports Social Links
-* Supports Publication Listing
-* Supports Project Listing
-* Supports Google Analytics
-* Supports Hugo RSS feeds
-
-# How To Install `Avicenna`?
-> I assume that you know to start with `Hugo`. If you do not know how to run a website with `Hugo`, please read its [quick start](https://gohugo.io/getting-started/quick-start/).
-
-```bash
-cd themes
-git clone https://github.com/hadisinaee/avicenna.git
-```
-
-# Sample Configuration
-```toml
-# your page address
 baseURL = "https://example.edu"
 languageCode = "en-us"
-title = "Your Name"
+title = "Hadi Sinaee"
 theme = "avicenna"
 googleAnalytics = "UA-1234-6"
 timeout=3000
 
 [params]
-  # your profile picture should be under "static" folder
-  profile_image="YourProfileImage.jpg"
+  profile_image="profile_bw.jpg"
   subtitle= "PhD Student"
   interests="Deep Reinforcement Learning, Machine Learning "
-  # your cv file should be under "static" folder
-  cv_name= "YourCVNameFile.pdf"
+  cv_name= "HadiSinaee_CV.pdf"
   blog="http://myblog.edu"
 
 [[params.affilation]]
@@ -70,6 +38,7 @@ timeout=3000
   icon = "linkedin"
   url = "https://linkedin.com/in/hadisinaee/"
 
+
 [[params.introduction.paragraph]]
   text="""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 	 Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Integer feugiat scelerisque varius morbi enim.
@@ -88,21 +57,21 @@ timeout=3000
 
 [[params.projects]]
 	[[params.projects.project]]
-		name = "my first cool project title"
+		name = "Velit egestas dui id ornare arcu odio ut sem. Nec nam aliquam sem et tortor"
 		description  = "Enim facilisis gravida neque convallis a. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse.Velit egestas dui id ornare arcu odio ut sem. Nec nam aliquam sem et tortor. In nisl nisi scelerisque eu ultrices vitae auctor."
 		project_page = "https://myprojecthomepage.com"
 		code_link = "https://coderepo.com"
 		blog_link = "https://ablogpost.com"
 
  [[params.projects.project]]
-		name = "my second cool project title"
+		name = "In nisl nisi scelerisque eu ultrices vitae auctor"
 		description  = ""
 		project_page = "https://myprojecthomepage.com"
 		code_link = "https://coderepo.com"
 		blog_link = ""
 
  [[params.projects.project]]
-		name = "my third cool project title"
+		name = "Integer eget aliquet nibh praesent tristique magna"
 		description  = ""
 		project_page = "https://myprojecthomepage.com"
 		code_link = ""
@@ -112,17 +81,17 @@ timeout=3000
   year="Preprint"
 
   [[params.publications.paper]]
-    name = "My Publication Title 1"
-    authors = "Author 1, Author 2, __ME__"
-    dest  = "Journal/Conference"
+    name = "Enim nunc faucibus a pellentesque sit amet porttitor"
+    authors = "Ana Alvardo, William Worthley, __Hadi Sinaee__"
+    dest  = "Helga Zita Journal"
     link = "https://mypaperishere.com"
     code_link = "https://thecoderepo.com"
     blog_link = "https://myblogaboutit.com"
 
   [[params.publications.paper]]
-    name = "My Publication Title 2"
-    authors = "__ME__, Author 1, Author 2"
-    dest  = "Journal/Conference"
+    name = "In cursus turpis massa tincidunt dui ut ornare lectus sit"
+    authors = "__Hadi Sinaee__,Les Larkins, Edra Ethier"
+    dest  = "Meklit Katlego Conference"
     link = "https://mypaperishere.com"
     code_link = "https://thecoderepo.com"
     blog_link = "https://myblogaboutit.com"
@@ -131,41 +100,33 @@ timeout=3000
   year="2019"
 
   [[params.publications.paper]]
-		name = "My Publication Title 1"
-		authors = "Author 1, __ME__ Author 2"
-		dest  = "Journal/Conference"
+		name = "Feugiat sed lectus vestibulum mattis ullamcorper velit sed"
+		authors = "Caroll Comes, __Hadi Sinaee__"
+		dest  = "Udo Madhu Journal"
 		link = "https://mypaperishere.com"
 		code_link = "https://thecoderepo.com"
 		blog_link = ""
 
   [[params.publications.paper]]
-		name = "My Publication Title 2"
-		authors = "Author 1, __ME__ "
-		dest  = "Journal/Conference"
+		name = "Venenatis urna cursus eget nunc. Nam aliquam sem et tortor consequat id porta nibh venenatis"
+		authors = "Les Larkins, Ana Alvardo, __Hadi Sinaee__ "
+		dest  = "Zorka Vita Conference"
 		link = "https://mypaperishere.com"
 		code_link = ""
 		blog_link = "https://myblogaboutit.com"
 
   [[params.publications.paper]]
-		name = "My Publication Title 3"
-		authors = "__ME__, Author 1 "
-		dest  = "Journal/Conference"
+		name = "Aliquet eget sit amet tellus cras adipiscing enim eu turpis"
+		authors = "Les Larkins, __Hadi Sinaee__, Ana Alvardo"
+		dest  = "Lena Randa Conference"
 		link = "https://mypaperishere.com"
 		code_link = ""
 		blog_link = ""
 
   [[params.publications.paper]]
-		name = "My Publication Title 4"
-		authors = "__ME__"
-		dest  = "Journal/Conference"
+		name = "Orci eu lobortis elementum nibh tellus molestie nunc non blandit"
+		authors = "__Hadi Sinaee__, Caroll Comes"
+		dest  = "Thandeka Radhika Conference"
 		link = ""
 		code_link = ""
 		blog_link = ""
-```
-
-# Any Idea?
-I am using `avicenna` for my personal uses. Therefore, I will update it regularly. If you need something that doesn't exists, let's discuss it over an issue :)
-
-# Credits
-* [Ezhil Theme](https://github.com/vividvilla/ezhil)
-* [Feather Icons](https://feathericons.com/)

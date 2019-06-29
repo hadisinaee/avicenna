@@ -1,0 +1,410 @@
+/* Ubuntu, Ubuntu */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a,
+a:hover {
+  color: #a00;
+  text-decoration: none;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: none;
+  height: 1px;
+  border: 0;
+  /* border-top: 1px solid #ccc; */
+  margin: 1rem 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+  width: 100%;
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+blockquote {
+  margin-left: 1rem;
+  font-style: italic;
+  font-size: 1.4rem;
+  font-family: Georgia, bitstream charter, serif;
+  border-left: 3px solid;
+  border-color: #a00;
+  padding-left: 20px;
+}
+
+blockquote cite {
+  font-size: 70%;
+  opacity: 0.8;
+}
+span {
+    display: block;
+}
+
+a,
+a:hover {
+  color: #a00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Ubuntu, raleway, sans-serif;
+  line-height: 1.2;
+  color: #330;
+  font-weight: 100;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+h6 {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.container {
+  max-width: 800px;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+ul.flat {
+  margin: 0;
+  padding: 0;
+}
+
+ul.flat li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 0;
+}
+
+.prevent-collapse {
+  min-height: 0.1rem;
+}
+
+.page-title {
+  margin: 0;
+}
+
+.smaller {
+  font-size: 70%;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+.introduction ul li {
+  margin-bottom: 10px;
+}
+
+.introduction ul li p {
+  display: inline;
+}
+
+.highlight pre {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 20px;
+  background-color: #fafafa !important;
+}
+
+.highlight {
+  background: 0 0;
+}
+
+.wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.header {
+  margin-bottom: 20px;
+  /* padding-bottom: 20px; */
+}
+
+.header .profile_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30%;
+  height: auto;
+  border-radius: 50%;
+  /* float: left; */
+}
+
+.header h1,
+.header h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 1.3em;
+}
+
+.header h2 {
+  font-size: 1.125rem;
+}
+
+.header nav {
+  margin-top: 20px;
+  /* border-top: 1px solid #f4f4f4; */
+}
+
+.header nav ul,
+.header nav li {
+  margin: 0;
+}
+
+.header nav ul.flat {
+  padding: 0;
+}
+
+.header nav ul.flat li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.header .site-affilation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .site-affilation .email {
+  /* color: #a00; */
+  font-size: 14px;
+  display: block;
+  font-family: "Ubuntu Mono";
+  font-weight: bolder;
+}
+
+.header .site-affilation .position {
+  /* color: #a00; */
+  /* font-size: 14px; */
+  /* display: block; */
+  font-family: Ubuntu;
+  /* font-weight: bolder; */
+}
+
+.header .site-affilation nav {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.header .site-affilation nav ul svg {
+  max-height: 15px;
+}
+
+.email {
+  /* color: #a00; */
+  font-size: 16px;
+  font-family: "Ubuntu Mono";
+  font-weight: bolder;
+}
+
+.collaborators {
+  font-size: 15px;
+  margin-left: .9em;
+  margin-top: .1em;
+}
+
+.year {
+  font-size: 20px;
+  margin-bottom: -.6em;
+}
+
+.project {
+  margin: .5em -.5em 0em;
+}
+
+.publications {
+  margin-left: -.5em;
+}
+
+.code_blog {
+    font-family: "Ubuntu Mono";
+    font-size: 14px;
+    margin: 0em .9em 0em;
+}
+
+.blog_cv {
+    font-family: "Ubuntu Mono";
+    font-size: 17px;
+    /* margin: 0em .9em 0em; */
+}
+
+.project_description {
+ margin: .5em .9em 0em;
+}
+
+.section .section-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.recent-posts .posts .introduction {
+  margin-bottom: 30px;
+}
+
+.recent-posts .posts .introduction .meta,
+.introduction .introduction-header .meta,
+.list .posts .introduction .meta {
+  font-size: 0.725rem;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.introduction .introduction-header {
+  margin-bottom: 30px;
+}
+
+.introduction .introduction-header .title {
+  margin: 0;
+}
+
+.introduction .introduction-header .meta {
+  padding-left: 5px;
+  margin-top: 10px;
+}
+
+.list .posts .introduction .meta {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.footer {
+  text-align: right;
+  font-size: 0.75em;
+  color: #999;
+  border-top: 1px solid #f4f4f4;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.page-title {
+  margin-bottom: 0;
+}
+
+.tag-cloud {
+  margin-top: 20px;
+}
+
+.tag-cloud a {
+  margin-right: 15px;
+}
+
+
+
+@media (max-width: 767px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .container {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
