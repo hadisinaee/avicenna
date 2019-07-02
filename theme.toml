@@ -4,7 +4,7 @@
 name = "Avicenna"
 license = "MIT"
 licenselink = "https://github.com/hadisinaee/avicenna/blob/master/LICENSE"
-description = ""
+description = "A minimal, simple, and responsive academic page."
 homepage = "https://github.com/hadisinaee/avicenna"
 tags = ["academic", "personal", "minimal", "minimalist", "clean", "responsive", "simple", "university"]
 features = ["Academic", "Responsive", "Clean And Minimal", "Social Media Links"]
