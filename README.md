@@ -40,8 +40,8 @@ $ hugo server
 To kick start, copy the following configuration and paste it in `config.toml` file in your root directory.
 
 __IMPORTANT__
- - copy your profile picture named `profile.jpg` in the `static` folder
- - copy your CV file in the `static` folder. Set the `cv_name` variable to your its full file name.
+ - copy your profile picture and name it `profile.jpg` in the `static` folder
+ - copy your CV file in the `static` folder. Set the `cv_name` variable to its full file name.
 
 ```toml
 baseURL = "https://example.edu"
