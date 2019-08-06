@@ -2,7 +2,7 @@
 	{{ with .Site.Params.projects }}
 	<h4>Projects</h4>
 	<ul>
-		{{- range $index, $projects_map := .Site.Params.projects -}}
+		{{- range $index, $projects_map := $.Site.Params.projects -}}
 
 		{{ range $elem_index, $project := $projects_map.project }}
 		<li>
