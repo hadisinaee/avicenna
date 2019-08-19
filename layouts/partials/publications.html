@@ -1,4 +1,5 @@
 <div class="introduction">
+	{{ with .Site.Params.publications }}
 	<h4>Publications</h4>
 
 	{{- range $index, $publications := .Site.Params.publications -}}
