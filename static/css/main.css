@@ -273,6 +273,16 @@ ul {
   max-height: 15px;
 }
 
+/* header for projects */
+.header .logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 15%;
+  height: auto;
+  border-radius: 50%;
+}
+
 .email {
   /* color: #a00; */
   font-size: 16px;
