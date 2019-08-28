@@ -1,7 +1,11 @@
 {{ define "main" }}
 
     <div class="header">
-        <img src="logo.png" class="logo">
+        {{ if (fileExists "logo.png") -}}
+            <img src="logo.png" class="logo">
+        {{- else }}
+            <img src={{ "images/default_publications.png" | absURL }} class="logo">
+        {{- end }}
     </div>
 
     <div class="content wrapper">
