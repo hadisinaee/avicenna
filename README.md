@@ -2,8 +2,7 @@
 A minimal academic page for academics built with Hugo.
 
 > This theme hugely benefits from `Ezhil Theme`. I just made some changes to create `avicenna`.
-
-# Screenshot
+> __NOTE: I will review all the pull requests in the second half of Nov. 2019. Thanks for your contributions :v:__
 
 ![Screenshot](images/screenshot.png "Avicenna")
 
