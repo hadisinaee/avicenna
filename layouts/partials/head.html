@@ -19,7 +19,7 @@
 		<nav class="nav social">
 			<ul class="flat">
 				{{- range $index, $key := .Site.Params.Social -}}
-				<a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
+				<a href="{{ $key.url }}" rel="me" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
 				{{- end -}}
 				{{ if or (.Site.Params.blog) (.Site.Params.cv_name) }}
 				|
