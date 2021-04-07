@@ -151,3 +151,10 @@ body {
     margin-top: 2.5%;
 }
 
+.footer {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.copy_right {
+    font-size: small;
+}
