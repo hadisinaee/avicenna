@@ -1,25 +1,17 @@
 # Avicenna Theme
 A minimal academic page for academics built with Hugo.
 
-> This theme hugely benefits from `Ezhil Theme`. I just made some changes to create `avicenna`.
-> __NOTE: I will review all the pull requests in the second half of Nov. 2019. Thanks for your contributions :v:__
-
 ![Screenshot](images/screenshot.png "Avicenna")
 
 # Features
 * Minimal, Responsive, and Clean
-* Single File Configuration
 * Supports Social Links
 * Supports Publication Listing
 * Supports Project Listing
 * Supports Google Analytics
-* Supports Hugo RSS feeds
 
 # How To Install `Avicenna`?
-> I assume that you know to start with `Hugo`. If you do not know how to run a website with `Hugo`, please read its [quick start](https://gohugo.io/getting-started/quick-start/).
-
-See the full setup in ~70 seconds:
-[![asciicast](https://asciinema.org/a/7ZReSH0ws7HVbI1c6UUN7wzfd.svg)](https://asciinema.org/a/7ZReSH0ws7HVbI1c6UUN7wzfd)
+You need to add `avicenna` folder to your `themes` folder.
 
 Or simply follow the instructions:
 ```bash
