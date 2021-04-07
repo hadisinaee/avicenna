@@ -1,15 +1,6 @@
 
 body {
-    /* font-family: 'Crimson Pro', sans-serif; */
-    /* font-family: 'Ubuntu Mono', serif; */
     font-family: 'Inter', sans-serif;
-    /* font-family: 'Crimson Text', serif; */
-    /* font-family: 'Source Serif Pro', serif; */
-    /* font-family: 'Libre Baskerville', serif; */
-    /* font-family: 'Cormorant Garamond', serif; */
-    /* font-family: 'Noto Serif JP', serif; */
-    /* font-family: 'Nanum Myeongjo', serif; */
-    /* font-size: large; */
     color: #071013;
 }
 
@@ -26,10 +17,7 @@ body {
 }
 
 .main_color  {
-    /* color: #bb2205; */
-    /* color: #d64933; */
     color: #8C1515;
-    /* color: #041E42; */
 }
 
 .secondary_color {
