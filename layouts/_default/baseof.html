@@ -2,12 +2,10 @@
 <html>
 {{- partial "core/head.html" . -}}
 
-<body class="container h-100">
+<body class="container d-flex flex-column min-vh-100">
 
 
     {{- block "main" . }}{{- end }}
-
-
 
     {{- partial "core/footer.html" . -}}
     {{- partial "core/script.html" . -}}
