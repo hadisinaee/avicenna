@@ -16,4 +16,7 @@
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 
     <title>{{ $title }}</title>
+
+    {{ template "_internal/google_analytics.html" . }}
+
 </head>
