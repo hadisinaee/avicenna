@@ -1,5 +1,5 @@
 # Avicenna Theme
-A minimal academic page for academics built with Hugo.
+A minimal academic page for academics!
 
 ![Screenshot](images/screenshot.png "Avicenna")
 
@@ -10,7 +10,21 @@ A minimal academic page for academics built with Hugo.
 * Supports Publications Listing
 * Supports Projects Listing
 
-# Step-by-Step Installation
+# How to use `Avicenna`?
+To use `Avicenna`, you need to follow three steps:
+1. Setup a site with `Avicenna`
+2. Customize the site to your needs
+3. Build your site and deploy it to your host
+
+The following sections are based on the mentioned steps.
+# How to setup a site with `Avicenna`?
+There are 2 ways to install `Avicenna`:
+1. The first one is a step-by-step approach that you could use to install it. 
+2. The second one is just an automated script based on the first approach. 
+
+Pick the one that works for you well. Also, I provided a link to a video clip showing the whole process of installation for both approaches.
+
+## 1. Step-by-Step Installation
 1. You need to install [Hugo][1] first!
 2. Create a new site and go to the directory:
 ```bash
@@ -28,12 +42,58 @@ git clone -b master git@github.com:hadisinaee/avicenna.git ./themes/avicenna
 
 4. Copy the sample site to your project:
 ```bash
-cp 
+cp -R themes/avicenna/exampleSite/* ./
 ```
-# Sample Configuration
+
+5. Run the site:
+```bash
+hugo serve
+```
+
+Now, you should be able to see the site at [http://localhost:1313](http://localhost:1313/)
+
+## 2. Automated Script
+In this approach, all you need is to replace the `my_cool_page` with your desired name in the following script:
+
+```bash
+wget https://raw.githubusercontent.com/hadisinaee/avicenna/master/setup_avicenna.sh && sh setup_avicenna.sh my_cool_page
+```
+
+Run the site:
+```bash
+hugo serve
+```
+
+Now, you should be able to see the site at http://localhost:1313
+
+# How to Customize `Avicenna`?
+## Adding Your Profile Picture, CV, and Favicon
+There is a folder named `static` under the root of your site's folder. Its structure is as follows:
+
+![static_folder](./static_folder.png)
+
+- **Profile Picture**: Simply replace `profile.png` with your profile file. Please use the same name and extenstion, e.g. `profile.png`. It doesn't work if you use another *name* or *extension*.
+- **CV**: You need to put your CV directly under `static` folder. I recommend you to use the name `cv.pdf` for your CV file. Also, if you wanted to use another file name, you would need to change it in your introduction. See Introduction Section.
+- **Favicon**: It has the same procedure as your profile picture.
+
+## Content
+All files and folders that you need to modify lies in the `content` folder. The folder should look like this
+
+![the content folder structure](avicenna_folder.png)
+
+Avicenna theme has three different sections: `Introduction`, `Publications`, and `Projects`. Based on the previous figure, you might have an intuition where you should modify. However, there are some details that I have to provide.
+
+## `Introduction` Section
+`Introduction` section is where you put details about yourself, such as your name, profile, interests, etc. To modify the introduction section, you need to edit the `content/about/_index.md` file.
+
+## `Publications` Section
+All your publications are stored in `content/publications`. This folder has the following structure:
+
+## Project Section
+
+# How to Deploy `Avicenna`?
 
 # Credits
-* [Ezhil Theme](https://github.com/vividvilla/ezhil)
 * [Feather Icons](https://feathericons.com/)
 * [Academic Hugo]() 
 
