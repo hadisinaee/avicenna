@@ -10,6 +10,3 @@ git clone -b master git@github.com:hadisinaee/avicenna.git ./themes/avicenna
 
 # copy the template site
 cp -R themes/avicenna/exampleSite/* ./
-
-# runs the site
-hugo serve
