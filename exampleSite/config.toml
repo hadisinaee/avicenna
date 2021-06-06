@@ -5,7 +5,7 @@ googleAnalytics = "UA/G-11111-1112"
 
 languageCode = "en-us"
 
-# for using avicenna you need to set the themes to 'avicenna'
+# for using avicenna you need to set the `themes` to 'avicenna'
 theme = "avicenna"
 
 # This is your page title, it appears in your tab
