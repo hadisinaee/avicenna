@@ -43,10 +43,12 @@
         {{ $twitter := index $aboutPage.Params.socials "twitter"}}
         {{ $twitch := index $aboutPage.Params.socials "twitch"}}
         {{ $github := index $aboutPage.Params.socials "github"}}
+        {{ $cv := $aboutPage.Params.cv }}
+
 
         {{if $google_scholar}}
         <a class="main_color" href='https://scholar.google.com/{{$google_scholar}}' target="_blank">
-            <i class="ai ai-google-scholar"></i>
+            <i class="ai ai-2x ai-google-scholar academic_icons_customize"></i>
         </a>
         {{end}}
 
@@ -74,6 +76,13 @@
             <i data-feather="twitch"></i>
         </a>
         {{end}}
+
+        {{if $cv}}
+        <a class="main_color" href='{{$cv}}' target="_blank">
+            <i class="ai ai-2x ai-cv academic_icons_customize"></i>
+        </a>
+        {{end}}
+
     </div>
 </div>
 {{end}}
