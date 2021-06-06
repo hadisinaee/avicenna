@@ -65,6 +65,9 @@ body {
     margin-top: 1%;
 }
 
+.about .socials a {
+    margin-left: .5%;
+}
 
 .about .academia .degree_major {
     font-size: small;
@@ -99,17 +102,17 @@ body {
 }
 
 
-.publication .section-4 {
+.publication .section-3 {
     margin-top: -.5%;
     font-family: 'Ubuntu Mono', serif;
     text-decoration: none;
 }
 
-.publication .section-4 a{
+.publication .section-3 a{
     padding: .15%;
 }
 
-.publication .section-4 a:hover {
+.publication .section-3 a:hover {
     transition-property: background-color;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;

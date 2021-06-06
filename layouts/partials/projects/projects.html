@@ -12,32 +12,17 @@
                 <span class="project-title">
                     {{$page.Params.title}}
                 </span>
-                <!-- <span class="text-muted project-date">
-                    , {{substr ($page.Params.date.Format "2006-01-02") 0 4}}
-                </span> -->
             </div>
 
             {{ $links := $page.Params.links }}
             {{ if $links }}
             <div class="section-2  w-100">
-                {{ if $links.custom_link }}
-                <a class="main_color text-decoration-none rounded" href="{{$links.custom_link}}"
-                    target="_blank">link</a>
-                {{end}}
-
                 {{ if $links.website }}
                 <a class="main_color text-decoration-none rounded " href="{{$links.git}}" target="_blank">website</a>
                 {{end}}
-
             </div>
             {{end}}
 
-            {{ $summary := $page.Params.summary}}
-            {{ if $summary }}
-            <div class="section-3 row w-100">
-                {{$summary }}
-            </div>
-            {{end}}
 
         </div>
         {{end}}

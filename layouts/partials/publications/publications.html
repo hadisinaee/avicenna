@@ -13,17 +13,14 @@
                 <span>
                     {{$page.Params.title}},
                 </span>
+
                 <span class="text-muted publication-date">
                     {{substr ($page.Params.date.Format "2006-01-02") 0 4}},
                 </span>
+
                 <span class="text-muted publication-name">
                     {{$page.Params.publication}}
                 </span>
-                {{if $page.Params.publication_short }}
-                <span class="text-muted publication-name-short">
-                    ({{$page.Params.publication_short}})
-                </span>
-                {{end}}
 
             </div>
 
@@ -48,7 +45,7 @@
 
             {{ $links := $page.Params.links }}
             {{ if $links }}
-            <div class="section-4  w-100">
+            <div class="section-3  w-100">
                 {{ if $links.url_pdf }}
                 <a class="main_color text-decoration-none rounded" href="{{$links.url_pdf}}" target="_blank">pdf</a>
                 {{end}}
@@ -67,16 +64,6 @@
                 <a class="main_color text-decoration-none rounded" href="{{$links.url_video}}" target="_blank">video</a>
                 {{end}}
 
-            </div>
-            {{end}}
-
-            {{ $abstract := $page.Params.abstract }}
-            {{ if $abstract }}
-            <div class="section-3 w-100">
-                <details close>
-                    <summary>abstract</summary>
-                    {{ $abstract }}
-                </details>
             </div>
             {{end}}
 
