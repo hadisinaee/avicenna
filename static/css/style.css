@@ -1,0 +1,163 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #071013;
+}
+
+a {
+    color: #8C1515;
+}
+
+.body {
+    margin: auto;
+}
+
+.h-100 {
+    margin: auto;
+}
+
+.w-100 {
+    margin: auto;
+}
+
+.main_color  {
+    color: #8C1515;
+}
+
+.secondary_color {
+    color: #071013;
+}
+
+.email_color {
+    color: #071013;
+}
+
+.secondary_font {
+    font-family: 'Ubuntu Mono', serif;
+}
+
+.section-subtitle {
+    font-family: 'Ubuntu Mono', serif;
+}
+
+#profile_picture  {
+    width: 20%;
+    height: auto;
+    margin-top: 1%;
+}
+
+.about #full_name {
+    font-size: x-large;
+}
+
+.about .affiliations #title {
+    padding-right: .5%;
+}
+
+.about .affiliations #name {
+    padding-right: .5%;
+}   
+
+.about #email {
+    font-family: 'Ubuntu Mono', serif; 
+    margin: auto;
+}
+
+.about .socials {
+    font-size: small;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.about .socials a {
+    margin-left: .5%;
+}
+
+.about .academia .degree_major {
+    font-size: small;
+}
+
+.about .academia .other_info {
+    font-size: small;
+}
+
+.course {
+    margin-top: 1%;
+}
+
+
+.publications .publication {
+    margin-top: 1.5%;
+}
+
+.publication .section-1 .publication-date {
+    font-family: 'Ubuntu Mono', serif;
+}
+
+.publication .section-1 .publication-name {
+    font-family: 'Ubuntu Mono', serif;
+}
+
+
+.publication .section-2 {
+    font-family: 'Ubuntu Mono', serif;
+    margin-top: -.1%;
+    margin-bottom: .5%;
+}
+
+
+.publication .section-3 {
+    margin-top: -.5%;
+    font-family: 'Ubuntu Mono', serif;
+    text-decoration: none;
+}
+
+.publication .section-3 a{
+    padding: .15%;
+}
+
+.publication .section-3 a:hover {
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+
+    border-radius: 50%;
+    background-color: #d64933;
+    color: white;
+}
+
+.publication .separator {
+    margin-left: -1%;
+}
+
+.projects .project {
+    margin-top: 1.5%;
+}
+
+.project .section-2 a {
+    padding: .8%;
+    margin-left: -.1%;
+}
+
+.projects .project a{
+    font-family: 'Ubuntu Mono', serif;
+    padding: .15%;
+}
+.projects .project .section-2 a:hover {
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+
+    border-radius: 50%;
+    background-color: #d64933;
+    color: white;
+}
+
+
+.section-title {
+    margin-top: 2.5%;
+}
+
+.copy_right {
+    font-size: small;
+}

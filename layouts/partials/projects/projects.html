@@ -1,0 +1,34 @@
+{{ $content_type := .Params.content_type }}
+{{if $content_type}}
+{{ $t := .Site.GetPage $content_type }}
+{{ $rscPages := $t.Resources.ByType "page"}}
+
+{{if gt (len $rscPages) 0}}
+<div class="projects row w-100">
+    <div class="col w-100">
+        {{range $page := sort $rscPages "Params.date" "desc"}}
+        <div class="project row w-100">
+            <div class="section-1 w-100">
+                <span class="project-title">
+                    {{$page.Params.title}}
+                </span>
+            </div>
+
+            {{ $links := $page.Params.links }}
+            {{ if $links }}
+            <div class="section-2  w-100">
+                {{ if $links.website }}
+                <a class="main_color text-decoration-none rounded " href="{{$links.git}}" target="_blank">website</a>
+                {{end}}
+            </div>
+            {{end}}
+
+
+        </div>
+        {{end}}
+
+
+    </div>
+    {{end}}
+</div>
+{{end}}

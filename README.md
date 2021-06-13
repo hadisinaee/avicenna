@@ -1,185 +1,136 @@
 # Avicenna Theme
-A minimal academic page for academics built with Hugo.
-
-> This theme hugely benefits from `Ezhil Theme`. I just made some changes to create `avicenna`.
-> __NOTE: I will review all the pull requests in the second half of Nov. 2019. Thanks for your contributions :v:__
+A minimal academic page for academics!
 
 ![Screenshot](images/screenshot.png "Avicenna")
 
 # Features
 * Minimal, Responsive, and Clean
-* Single File Configuration
-* Supports Social Links
-* Supports Publication Listing
-* Supports Project Listing
 * Supports Google Analytics
-* Supports Hugo RSS feeds
+* Supports Social Links
+* Supports Publications Listing
+* Supports Projects Listing
 
-# How To Install `Avicenna`?
-> I assume that you know to start with `Hugo`. If you do not know how to run a website with `Hugo`, please read its [quick start](https://gohugo.io/getting-started/quick-start/).
+# How to use `Avicenna`?
+To use `Avicenna`, you need to follow three steps:
+1. Setup a site with `Avicenna`
+2. Customize the site to your needs
+3. Build your site and deploy it to your host
 
-See the full setup in ~70 seconds:
-[![asciicast](https://asciinema.org/a/7ZReSH0ws7HVbI1c6UUN7wzfd.svg)](https://asciinema.org/a/7ZReSH0ws7HVbI1c6UUN7wzfd)
+The following sections are based on the mentioned steps.
+# 1. How to setup a site with `Avicenna`?
+There are 2 ways to install `Avicenna`:
+1. The first one is a step-by-step approach that you could use to install it. 
+2. The second one is just an automated script based on the first approach. 
 
-Or simply follow the instructions:
+Pick the one that works for you well. Also, I provided a link to a video clip showing the whole process of installation for both approaches.
+
+## 1. Step-by-Step Installation
+1. You need to install [Hugo][1] first!
+2. Create a new site and go to the directory:
 ```bash
-# creates a static site
-$ hugo new site my-academic-page
-$ cd my-academic-page
-$ cd themes
-$ git clone https://github.com/hadisinaee/avicenna.git
-$ cd ..
-$ cp ./themes/avicenna/exampleSite/config.toml ./
-$ cp Path/To/YourPrile/profile.jpg ./static/profile.jpg
-$ hugo server
+# replace the `my_cool_page` with whatever you want!
+hugo new site my_cool_page
+
+# move to your project folder
+cd my_cool_page
 ```
 
-# Sample Configuration
-
-To kick start, copy the following configuration and paste it in `config.toml` file in your root directory.
-
-__IMPORTANT__
- - copy your profile picture and name it `profile.jpg` in the `static` folder
- - copy your CV file in the `static` folder. Set the `cv_name` variable to its full file name.
-
-```toml
-baseURL = "https://example.edu"
-languageCode = "en-us"
-title = "Hadi Sinaee"
-theme = "avicenna"
-googleAnalytics = "UA-1234-6"
-timeout=3000
-
-[params]
-  subtitle= "PhD Student"
-  interests="Deep Reinforcement Learning, Machine Learning "
-  cv_name= "HadiSinaee_CV.pdf"
-  blog="http://myblog.edu"
-
-[[params.affilation]]
-  name = "Stanford University"
-  position = "PhD Student"
-  contact = "hadi@cs.stanford.edu"
-
-[[params.affilation]]
-  name = "MyCoolStartup"
-  position = "Co-Founder"
-  contact = "hadi@mycoolstartup.ai"
-
-[[params.social]]
-  name = "GitHub"
-  icon = "github"
-  url = "https://github.com/hadisinaee"
-
-[[params.social]]
-  name = "Twitter"
-  icon = "twitter"
-  url = "https://twitter.com/hadisinaee"
-
-
-[[params.social]]
-  name = "LinkedIn"
-  icon = "linkedin"
-  url = "https://linkedin.com/in/hadisinaee/"
-
-
-[[params.introduction.paragraph]]
-  text="""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-	 Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Integer feugiat scelerisque varius morbi enim.
-	  A diam maecenas sed enim ut sem viverra. Orci eu lobortis elementum nibh tellus.
-		Egestas sed sed risus pretium quam vulputate dignissim suspendisse in.
-		Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Condimentum lacinia quis vel eros donec.
-   """
-[[params.introduction.paragraph]]
-  text=""" Pellentesque nec nam aliquam sem et tortor consequat id porta.
-	Viverra suspendisse potenti nullam ac. Leo vel orci porta non pulvinar neque laoreet.
-	Nulla facilisi nullam vehicula ipsum a arcu. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse.
-	Ullamcorper velit sed ullamcorper morbi tincidunt ornare. Dui sapien eget mi proin sed libero.
-	Quam pellentesque nec nam aliquam sem et tortor consequat id. Aliquet lectus proin nibh nisl.
-  """
-
-
-[[params.projects]]
-	[[params.projects.project]]
-		name = "Velit egestas dui id ornare arcu odio ut sem. Nec nam aliquam sem et tortor"
-		description  = "Enim facilisis gravida neque convallis a. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse.Velit egestas dui id ornare arcu odio ut sem. Nec nam aliquam sem et tortor. In nisl nisi scelerisque eu ultrices vitae auctor."
-		project_page = "https://myprojecthomepage.com"
-		code_link = "https://coderepo.com"
-		blog_link = "https://ablogpost.com"
-
- [[params.projects.project]]
-		name = "In nisl nisi scelerisque eu ultrices vitae auctor"
-		description  = ""
-		project_page = "https://myprojecthomepage.com"
-		code_link = "https://coderepo.com"
-		blog_link = ""
-
- [[params.projects.project]]
-		name = "Integer eget aliquet nibh praesent tristique magna"
-		description  = ""
-		project_page = "https://myprojecthomepage.com"
-		code_link = ""
-		blog_link = "https://ablogpost.com"
-
-[[params.publications]]
-  year="Preprint"
-
-  [[params.publications.paper]]
-    name = "Enim nunc faucibus a pellentesque sit amet porttitor"
-    authors = "Ana Alvardo, William Worthley, __Hadi Sinaee__"
-    dest  = "Helga Zita Journal"
-    link = "https://mypaperishere.com"
-    code_link = "https://thecoderepo.com"
-    blog_link = "https://myblogaboutit.com"
-
-  [[params.publications.paper]]
-    name = "In cursus turpis massa tincidunt dui ut ornare lectus sit"
-    authors = "__Hadi Sinaee__,Les Larkins, Edra Ethier"
-    dest  = "Meklit Katlego Conference"
-    link = "https://mypaperishere.com"
-    code_link = "https://thecoderepo.com"
-    blog_link = "https://myblogaboutit.com"
-
-[[params.publications]]
-  year="2019"
-
-  [[params.publications.paper]]
-		name = "Feugiat sed lectus vestibulum mattis ullamcorper velit sed"
-		authors = "Caroll Comes, __Hadi Sinaee__"
-		dest  = "Udo Madhu Journal"
-		link = "https://mypaperishere.com"
-		code_link = "https://thecoderepo.com"
-		blog_link = ""
-
-  [[params.publications.paper]]
-		name = "Venenatis urna cursus eget nunc. Nam aliquam sem et tortor consequat id porta nibh venenatis"
-		authors = "Les Larkins, Ana Alvardo, __Hadi Sinaee__ "
-		dest  = "Zorka Vita Conference"
-		link = "https://mypaperishere.com"
-		code_link = ""
-		blog_link = "https://myblogaboutit.com"
-
-  [[params.publications.paper]]
-		name = "Aliquet eget sit amet tellus cras adipiscing enim eu turpis"
-		authors = "Les Larkins, __Hadi Sinaee__, Ana Alvardo"
-		dest  = "Lena Randa Conference"
-		link = "https://mypaperishere.com"
-		code_link = ""
-		blog_link = ""
-
-  [[params.publications.paper]]
-		name = "Orci eu lobortis elementum nibh tellus molestie nunc non blandit"
-		authors = "__Hadi Sinaee__, Caroll Comes"
-		dest  = "Thandeka Radhika Conference"
-		link = ""
-		code_link = ""
-		blog_link = ""
-
+3. Add the stable release of `Avicenna` (the `master` branch) to your `themes` folder:
+```bash
+git clone -b master git@github.com:hadisinaee/avicenna.git ./themes/avicenna
 ```
 
-# Any Idea?
-I am using `Avicenna` for my personal uses. Therefore, I will update it regularly. If you need something that doesn't exist, let's discuss it over an issue :)
+4. Copy the sample site to your project:
+```bash
+cp -R themes/avicenna/exampleSite/* ./
+```
+
+5. Run the site:
+```bash
+hugo serve
+```
+
+Now, you should be able to see the site at [http://localhost:1313](http://localhost:1313/)
+
+## 2. Automated Script
+In this approach, all you need is to replace the `my_cool_page` with your desired name in the following script:
+
+```bash
+wget https://raw.githubusercontent.com/hadisinaee/avicenna/master/setup_avicenna.sh && sh setup_avicenna.sh my_cool_page
+```
+
+Run the site:
+```bash
+hugo serve
+```
+
+Now, you should be able to see the site at http://localhost:1313
+
+# 2. How to Customize `Avicenna`?
+
+## Start With the `config.toml`
+You can start the customization with the `config.toml` file. It's located a the root of your project. In this file, you can set your name, your website URL, googleAnalytics id, etc.
+
+## Adding Your Profile Picture, CV, and Favicon
+There is a folder named `static` under the root of your site's folder. Its structure is as follows:
+
+![static_folder](./static_folder.png)
+
+- **Profile Picture**: Simply replace `profile.png` with your profile file. Please use the same name and extenstion, e.g. `profile.png`. It doesn't work if you use another *name* or *extension*.
+- **CV**: You need to put your CV directly under `static` folder. I recommend you to use the name `cv.pdf` for your CV file. Also, if you wanted to use another file name, you would need to change it in your introduction. See Introduction Section.
+- **Favicon**: It has the same procedure as your profile picture.
+
+## Content
+All files and folders that you need to modify lies in the `content` folder. The folder should look like this
+
+![the content folder structure](avicenna_folder.png)
+
+Avicenna theme has three different sections: `Introduction`, `Publications`, and `Projects`. Based on the previous figure, you might have an intuition where you should modify. However, there are some details that I have to provide.
+
+## `Introduction` Section
+`Introduction` section is where you put details about yourself, such as your name, profile, interests, etc. To modify the introduction section, you need to edit the `content/about/_index.md` file.
+
+## `Publications` Section
+All your publications are stored in `content/publications`. To create a new publication:
+
+```
+hugo new publications/your-pub-name.md
+```
+
+If was successful, you would see a message similar to the following:
+
+```
+YOUR_PROJECT_PATH/content/publications/your-pub-name.md
+```
+
+To edit the file, go to `content/publications` and then find your `your-pub-name.md` file and change it.
+
+
+## Project Section
+All your projects are stored in `content/projects`. To create a new project:
+
+```
+hugo new projects/your-project-name.md
+```
+
+If was successful, you would see a message similar to the following:
+
+```
+YOUR_PROJECT_PATH/content/projects/your-project-name.md
+```
+
+To edit the file, go to `content/projects` and then find your `your-project-name.md` file and change it.
+
+
+# 3. How to Deploy `Avicenna`?
+1. Make sure you have changed your `baseURL` in the `config.toml` file. It should be the address you want to deploy `Avicenna` on.
+2. Run `hugo` in the root of your project. The result will be in the `public` folder in the root of your project.
+3. Copy `public` folder and move it your host server.
 
 # Credits
-* [Ezhil Theme](https://github.com/vividvilla/ezhil)
 * [Feather Icons](https://feathericons.com/)
+* [Academic Icons](https://jpswalsh.github.io/academicons/)
+* [Academic Hugo](https://wowchemy.com/templates/) 
+
+
+[1]: https://gohugo.io/getting-started/installing/

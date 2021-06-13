@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
-    {{ partial "header.html" . }}
-    <body>
-        <div id="content">
-        {{- block "main" . }}{{- end -}}
-        </div>
-        {{ partial "footer.html" . }}
-    </body>
+{{- partial "core/head.html" . -}}
+
+<body class="container d-flex flex-column min-vh-100">
+
+
+    {{- block "main" . }}{{- end }}
+
+    {{- partial "core/footer.html" . -}}
+    {{- partial "core/script.html" . -}}
+</body>
+
 </html>
