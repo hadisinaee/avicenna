@@ -11,11 +11,5 @@ name = "Avicenna"
 tags = ["academic", "personal", "minimal", "minimalist", "clean", "responsive", "simple", "university"]
 
 [author]
-homepage = "http://ce.sharif.edu/~sinaee/"
+homepage = "https://hadisinaee.github.io/"
 name = "Hadi Sinaee"
-
-# If porting an existing theme
-[original]
-homepage = "https://github.com/vividvilla/ezhil"
-name = "ezhil"
-repo = "https://github.com/vividvilla/ezhil"
