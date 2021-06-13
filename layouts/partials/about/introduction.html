@@ -43,6 +43,7 @@
         {{ $twitter := index $aboutPage.Params.socials "twitter"}}
         {{ $twitch := index $aboutPage.Params.socials "twitch"}}
         {{ $github := index $aboutPage.Params.socials "github"}}
+        {{ $linkedin := index $aboutPage.Params.socials "linkedin"}}
         {{ $cv := $aboutPage.Params.cv }}
 
 
@@ -70,6 +71,11 @@
         </a>
         {{end}}
 
+        {{ if $linkedin }}
+        <a class="main_color" href='https://linkedin.com/in/{{$linkedin}}' target="_blank">
+            <i data-feather="linkedin"></i>
+        </a>
+        {{end}}
 
         {{ if $twitch }}
         <a class="main_color" href='https://twitch.com/{{$twitch}}' target="_blank">
