@@ -12,6 +12,7 @@ socials:
     twitter: "HadiSinaee"
     github: "hadisinaee"
     facebook: "hadisinaee"
+    linkedin: "hadisinaee"
     twitch: "hadisinaee"
     google_scholar: "hadisinaee"
 
