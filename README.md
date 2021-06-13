@@ -19,12 +19,27 @@ To use `Avicenna`, you need to follow three steps:
 The following sections are based on the mentioned steps.
 # 1. How to setup a site with `Avicenna`?
 There are 2 ways to install `Avicenna`:
-1. The first one is a step-by-step approach that you could use to install it. 
-2. The second one is just an automated script based on the first approach. 
+1. The first one is just an automated script based on the second approach(recommended). 
+2. The sedond one is a step-by-step approach. 
 
-Pick the one that works for you well. Also, I provided a link to a video clip showing the whole process of installation for both approaches.
+## 1. Automated Script
+In this approach, all you need is to replace the `my_cool_page` with your desired name in the following script:
 
-## 1. Step-by-Step Installation
+```bash
+wget https://raw.githubusercontent.com/hadisinaee/avicenna/master/setup_avicenna.sh && sh setup_avicenna.sh my_cool_page
+```
+
+Run the site:
+```bash
+hugo serve
+```
+
+Now, you should be able to see the site at http://localhost:1313
+
+## 2. Step-by-Step Installation
+<details>
+  <summary>Click to see!</summary>
+  
 1. You need to install [Hugo][1] first!
 2. Create a new site and go to the directory:
 ```bash
@@ -51,20 +66,7 @@ hugo serve
 ```
 
 Now, you should be able to see the site at [http://localhost:1313](http://localhost:1313/)
-
-## 2. Automated Script
-In this approach, all you need is to replace the `my_cool_page` with your desired name in the following script:
-
-```bash
-wget https://raw.githubusercontent.com/hadisinaee/avicenna/master/setup_avicenna.sh && sh setup_avicenna.sh my_cool_page
-```
-
-Run the site:
-```bash
-hugo serve
-```
-
-Now, you should be able to see the site at http://localhost:1313
+</details>
 
 # 2. How to Customize `Avicenna`?
 
