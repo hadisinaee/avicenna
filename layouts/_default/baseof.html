@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="{{ with .Site.LanguageCode }}{{.}}{{ else }}en-us{{end}}">
 {{- partial "core/head.html" . -}}
 
 <body class="container d-flex flex-column min-vh-100">
-
-
     {{- block "main" . }}{{- end }}
 
     {{- partial "core/footer.html" . -}}
