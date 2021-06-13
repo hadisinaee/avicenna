@@ -18,7 +18,10 @@
             {{ if $links }}
             <div class="section-2  w-100">
                 {{ if $links.website }}
-                <a class="main_color text-decoration-none rounded " href="{{$links.git}}" target="_blank">website</a>
+                <a class="main_color text-decoration-none rounded " href="{{$links.website}}" target="_blank">
+                    {{if $links.alias}} {{$links.alias}} {{else}} website {{end}}
+
+                </a>
                 {{end}}
             </div>
             {{end}}
