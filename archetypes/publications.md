@@ -7,11 +7,13 @@ date: "2018-09-01"
 
 publication: "Journal of Machine Learning"
 
+# You can have multiple links
+# format is, LINK_NAME : LINK_URL
 links:
-    url_pdf: https://github.com/hadisinaee/avicenna
-    url_code: https://github.com/hadisinaee/avicenna
-    url_slides: https://github.com/hadisinaee/avicenna
-    url_video: https://github.com/hadisinaee/avicenna
+    pdf: https://github.com/hadisinaee/avicenna
+    code: https://github.com/hadisinaee/avicenna
+    slides: https://github.com/hadisinaee/avicenna
+    video: https://github.com/hadisinaee/avicenna
 
 ---
 
