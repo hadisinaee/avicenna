@@ -46,24 +46,13 @@
             {{ $links := $page.Params.links }}
             {{ if $links }}
             <div class="section-3  w-100">
-                {{ if $links.url_pdf }}
-                <a class="main_color text-decoration-none rounded" href="{{$links.url_pdf}}" target="_blank">pdf</a>
+                {{range $link_name, $link_url := $links}}
+                    {{ if $link_url }}
+                <a class="main_color text-decoration-none rounded" href="{{$link_url}}" target="_blank">
+                    {{$link_name}}
+                </a>
+                    {{end}}
                 {{end}}
-
-                {{ if $links.url_code }}
-                <a class="main_color text-decoration-none rounded " href="{{$links.url_code}}" target="_blank">code</a>
-                {{end}}
-
-
-                {{ if $links.url_slides }}
-                <a class="main_color text-decoration-none rounded" href="{{$links.url_slides}}"
-                    target="_blank">slides</a>
-                {{end}}
-
-                {{ if $links.url_video }}
-                <a class="main_color text-decoration-none rounded" href="{{$links.url_video}}" target="_blank">video</a>
-                {{end}}
-
             </div>
             {{end}}
 

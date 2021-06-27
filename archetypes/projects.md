@@ -6,7 +6,10 @@ title: "Your Project Title Goes Here"
 date: "2019-03-30" 
 
 # links is used for specific links for your project
+# You can have multiple links
+# format is, LINK_NAME : LINK_URL
 links:
-    website: 'https://github.com/'
+    website: 'https://example.com/'
+    code: 'https://github.com/'
 ---
 

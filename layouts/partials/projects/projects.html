@@ -17,11 +17,12 @@
             {{ $links := $page.Params.links }}
             {{ if $links }}
             <div class="section-2  w-100">
-                {{ if $links.website }}
-                <a class="main_color text-decoration-none rounded " href="{{$links.website}}" target="_blank">
-                    {{if $links.alias}} {{$links.alias}} {{else}} website {{end}}
-
+                {{range $link_name, $link_url := $links}}
+                {{ if $link_url }}
+                <a class="main_color text-decoration-none rounded " href="{{$link_url}}" target="_blank">
+                    {{$link_name}}
                 </a>
+                {{end}}
                 {{end}}
             </div>
             {{end}}
