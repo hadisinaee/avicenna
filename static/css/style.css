@@ -85,6 +85,23 @@ a {
     margin-top: 1%;
 }
 
+.news {
+    margin-top: 1.5%;
+}
+
+.news_list  {
+    padding: 0%;
+    list-style-type: none;
+}
+
+.news_list svg {
+    margin-right: .5%;
+}
+
+.news_icon i {
+    font-size: x-small;
+    color: #071013;
+}
 
 .publications .publication {
     margin-top: 1.5%;
