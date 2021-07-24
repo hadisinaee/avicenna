@@ -1,10 +1,11 @@
 # Avicenna Theme
 A minimal academic page for academics!
 
-![Screenshot](https://github.com/hadisinaee/avicenna/blob/master/images/screenshot.png "Avicenna")
+[![Screenshot](https://github.com/hadisinaee/avicenna/blob/master/images/youtube.png "Avicenna")](https://youtu.be/1Wy-X0NGv0w)
 
 # Features
 * Minimal, Responsive, and Clean
+* :new: Supports News Feed
 * Supports Google Analytics
 * Supports Social Links
 * Supports Publications Listing
