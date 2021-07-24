@@ -1,0 +1,44 @@
+{{ $content_type := .Params.content_type }}
+{{ $newsPage := .Site.GetPage $content_type }}
+
+{{ $news_items := $newsPage.Params.news_items }}
+{{ $show_news_icons := $newsPage.Params.show_news_icons }}
+
+{{ $default_news_icon := "" }}
+{{ if $show_news_icons }}
+{{ $default_news_icon = $newsPage.Params.default_news_icon }}
+{{ end }}
+
+{{ $news_icon := $default_news_icon }}
+
+{{ $num_news_to_show := $newsPage.Params.num_news }}
+<div class="news row w-100">
+    <div class="col w-100">
+        <ul class="news_list">
+            {{ range $item := first $num_news_to_show (sort $news_items "date" "desc") }}
+            {{ if $item.icon }}
+            {{ $news_icon = $item.icon }}
+            {{ end }}
+
+            <li>
+                {{ if $show_news_icons }}
+                <i data-feather="{{ $news_icon }}"></i>
+                {{ end }}
+
+                {{ if $item.link}}
+                <a href='{{ $item.link }}' target="_blank">
+                    {{ markdownify (emojify $item.text) }}
+                </a>
+                {{ else }}
+                {{ markdownify (emojify $item.text) }}
+                {{ end }}
+
+                {{ if $item.extra_text }}
+                <span class="secondary_font text-muted">, {{ markdownify (emojify $item.extra_text) }}</span>
+                {{end}}
+
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
