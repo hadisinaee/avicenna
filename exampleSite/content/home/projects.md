@@ -11,7 +11,4 @@ section_settings:
     subtitle: 'Custom Subtitle: see my github for the complete list'
 ---
 
-[See the wiki page for tutorial!](https://github.com/hadisinaee/avicenna/wiki)
-
-ADDING NEW PROJECTS
-> USE home/projects.md and make your changes there!
+home/projects.md

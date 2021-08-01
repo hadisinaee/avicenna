@@ -1,0 +1,11 @@
+<div class="blog_nav_bar secondary_font ">
+    {{ range $key, $value := . }}
+    {{ if eq $value "about" }}
+    <a class="navbar-brand" href="/">{{ $value }}</a>
+    {{ else if eq $value "blog" }}
+    <a class="navbar-brand" href="/blog">« all posts</a>
+    {{ else }}
+    <a class="navbar-brand" href="/{{$value}}">{{ $value }}</a>
+    {{ end }}
+    {{ end }}
+</div>

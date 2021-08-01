@@ -1,13 +1,32 @@
 {{ define "main" }}
-this is _default/list.html
 
-<h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
+{{ partial "blog/blog_navbar.html" (dict "1" "about" ) }}
+
+{{ $paginator := .Paginate (where .Data.Pages "Type" "blog") }}
+{{ $paginator := .Paginator }}
+
+<h1>All Posts</h1>
+
+{{ range $paginator.Pages.ByPublishDate.Reverse }}
+
 <p>
-<h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-<a class="summary" href="{{ .RelPermalink }}">
-    <p>{{ .Summary }}</p>
-</a>
+    <!-- start of each blog post -->
+    {{ partial "blog/blog_post_header.html" . }}
+
+    {{ partial "blog/blog_post_body.html" . }}
+
+
+    <!-- end each blog post -->
 </p>
+
 {{ end }}
+
+<!-- If there's more than one page. -->
+{{ if gt $paginator.TotalPages 1 }}
+
+{{ template "_internal/pagination.html" . }}
+
+{{ end }}
+
+
 {{ end }}

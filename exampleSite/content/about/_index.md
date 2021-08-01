@@ -7,6 +7,7 @@ headless: true
 full_name: "Hadi Sinaee"
 profile_picture: "profile.png"
 cv: "cv.pdf"
+blog: true
 
 socials:
     twitter: "HadiSinaee"
@@ -17,9 +18,10 @@ socials:
     google_scholar: "hadisinaee"
 
 interests:
-    - interest 1
-    - interest 2
-    - interest 3
+    - Data Intensive Systems
+    - Distributed Systems
+    - Data Streaming Platforms
+    - Large-Scale Data Processing Platforms
 
 affiliations:
     - affiliation:
@@ -54,10 +56,10 @@ academia:
         other_info: 'graduated with first class honor, supervised by Prof.  Cool!'
 ---
 
-**Donec sollicitudin**, [ante pulvinar tincidunt][1] luctus, dolor mauris lobortis ex, *id tincidunt metus* risus nec ex. Curabitur magna mauris, facilisis vitae porttitor vitae, tincidunt sed mi. In at dui lectus. Integer ante arcu, vestibulum fermentum ante eu, maximus maximus quam. Curabitur placerat cursus posuere. Phasellus dui lorem, varius a augue non, eleifend accumsan mauris. Aenean varius posuere feugiat. In hac habitasse platea dictumst. Aenean quis ex quis nisl consequat fermentum in vitae nunc. Proin consectetur ac nulla in tempus. Maecenas enim nisi, pulvinar sit amet fermentum eget, ultrices vitae enim. Etiam vel sollicitudin felis.
+**Donec** sollicitudin, [ante][1] pulvinar tincidunt luctus, dolor mauris lobortis ex, id tincidunt metus risus nec ex. Curabitur magna mauris, facilisis vitae porttitor vitae, tincidunt sed mi. In at dui lectus. Integer ante arcu, vestibulum fermentum ante eu, maximus maximus quam. Curabitur placerat cursus posuere. Phasellus dui lorem, varius a augue non, eleifend accumsan mauris. Aenean varius posuere feugiat. In hac habitasse platea dictumst. Aenean quis ex quis nisl consequat fermentum in vitae nunc. Proin consectetur ac nulla in tempus. Maecenas enim nisi, pulvinar sit amet fermentum eget, ultrices vitae enim. Etiam vel sollicitudin felis.
 
 
 Donec sollicitudin, ante pulvinar tincidunt luctus, dolor mauris lobortis ex, id tincidunt metus risus nec ex. Curabitur magna mauris, facilisis vitae porttitor vitae, 
 
 
-[1]: https://google.com
+[1]: ahadsfsa.com
