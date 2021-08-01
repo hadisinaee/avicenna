@@ -5,4 +5,4 @@ draft: false
 headless: true
 ---
 
-[See the wiki page for tutorial!](https://github.com/hadisinaee/avicenna/wiki)
+helllo  content/publications/index.md

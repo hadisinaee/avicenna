@@ -1,0 +1,9 @@
+<div class="toc ">
+    <div>
+        <strong>Table of Contents</strong>
+    </div>
+    <div>
+        <!-- {{ .Page.TableOfContents | replaceRE "<ul>[[:space:]]*<li>[[:space:]]*<ul>" "<ul>" | replaceRE "</ul>[[:space:]]*</li>[[:space:]]*</ul>" "</ul>" | safeHTML }} -->
+        {{ .Page.TableOfContents }}
+    </div>
+</div>
