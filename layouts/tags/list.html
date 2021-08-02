@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{ partial "blog/blog_navbar.html" (dict "1" "about" "2" "blog")}}
+
+
+<h2>Posts In <code>#{{ .Data.Term }}</code> </h2>
+
+{{ range .Pages.ByPublishDate.Reverse }}
+<p>
+    {{ partial "blog/blog_post_header.html" . }}
+
+    {{ partial "blog/blog_post_body.html" . }}
+
+</p>
+{{ end }}
+
+
+{{ end }}

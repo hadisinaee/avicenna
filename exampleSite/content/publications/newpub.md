@@ -15,3 +15,5 @@ links:
 
 ---
 
+
+[See the wiki page for tutorial!](https://github.com/hadisinaee/avicenna/wiki)
