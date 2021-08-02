@@ -10,10 +10,10 @@ enableEmoji = true
 theme = "avicenna"
 
 # This is your page title, it appears in your tab
-title = "YOUR NAME HERE"
+title = "YOUR_NAME"
 
 # number of posts to show on the blog page
-paginate = 5
+paginate = 10
 
 [markup]
 [markup.tableOfContents]
@@ -23,4 +23,4 @@ startLevel = 1
 
 [params]
 # it is used for the copy-right section of your page
-name = "YOUR NAME"
+name = "YOUR_NAME"

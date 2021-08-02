@@ -4,18 +4,19 @@ date: 2020-10-20T17:51:47+03:30
 draft: false
 headless: true
 
-full_name: "Hadi Sinaee"
+full_name: "YOUR_NAME"
 profile_picture: "profile.png"
 cv: "cv.pdf"
+# set to false if you don't want to show your blog
 blog: true
 
 socials:
-    twitter: "HadiSinaee"
-    github: "hadisinaee"
-    facebook: "hadisinaee"
-    linkedin: "hadisinaee"
-    twitch: "hadisinaee"
-    google_scholar: "hadisinaee"
+    twitter: "YOUR_NAME"
+    github: "YOUR_NAME"
+    facebook: "YOUR_NAME"
+    linkedin: "YOUR_NAME"
+    twitch: "YOUR_NAME"
+    google_scholar: "YOUR_NAME"
 
 interests:
     - Data Intensive Systems
