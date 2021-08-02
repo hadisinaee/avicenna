@@ -45,6 +45,7 @@
         {{ $github := index $aboutPage.Params.socials "github"}}
         {{ $linkedin := index $aboutPage.Params.socials "linkedin"}}
         {{ $cv := $aboutPage.Params.cv }}
+        {{ $blog := $aboutPage.Params.blog}}
 
 
         {{if $google_scholar}}
@@ -88,6 +89,14 @@
             <i class="ai ai-2x ai-cv academic_icons_customize"></i>
         </a>
         {{end}}
+
+        {{ if $blog }}
+        <a id="blog_logo" class="main_color" href='/blog' target="_blank">
+            <i class="ai ai-2x ai-blog academic_icons_customize">Blog</i>
+
+        </a>
+        {{ end }}
+
 
     </div>
 </div>
