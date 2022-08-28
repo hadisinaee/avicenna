@@ -21,6 +21,11 @@ h2 code {
   padding: 2px;
 }
 
+h6 a {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 #TableOfContents ul {
     margin: auto;
     padding-left: 2%;

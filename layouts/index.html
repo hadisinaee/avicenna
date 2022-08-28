@@ -16,7 +16,7 @@ NO CONTENT TYPE FOUND. Set content_type = "{{.Params.title | lower }}"
 
 {{ $subtitle := "" }}
 {{ if .Params.section_settings.subtitle }}
-{{ $subtitle = .Params.section_settings.subtitle }}
+{{ $subtitle = .Params.section_settings.subtitle | markdownify }}
 {{ end }}
 
 {{ if or $title (eq $content_type "about")}}
