@@ -1,11 +1,11 @@
 <div class="blog_nav_bar secondary_font ">
     {{ range $key, $value := . }}
     {{ if eq $value "about" }}
-    <a class="navbar-brand" href="/">{{ $value }}</a>
+    <a class="navbar-brand" href="{{ site.Home.RelPermalink }}">{{ $value }}</a>
     {{ else if eq $value "blog" }}
-    <a class="navbar-brand" href="/blog">« all posts</a>
+    <a class="navbar-brand" href="{{ "blog/" | relURL }}">« all posts</a>
     {{ else }}
-    <a class="navbar-brand" href="/{{$value}}">{{ $value }}</a>
+    <a class="navbar-brand" href="{{ (printf "%s/" $value) | relURL }}">{{ $value }}</a>
     {{ end }}
     {{ end }}
 </div>

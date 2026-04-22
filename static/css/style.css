@@ -1,273 +1,417 @@
+:root {
+    --color-accent: #8c1515;
+    --color-accent-strong: #d64933;
+    --color-text: #071013;
+    --color-muted: #5d6972;
+    --color-border: #d7dde2;
+    --surface-subtle: #f7f8fa;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: #071013;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: #fff;
+}
+
+body.container {
+    width: min(100% - 2rem, 72rem);
+    margin: 0 auto;
+    padding: 1.5rem 0 2rem;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
-    color: #8C1515;
+    color: var(--color-accent);
 }
 
 a:hover {
-    text-decoration: underline;
     color: #050517;
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.25;
+    margin: 0 0 0.75rem;
+}
+
+p,
+ul,
+ol {
+    margin-top: 0;
 }
 
 h2 code {
-  font-family: Consolas,"courier new";
-  /* background-color: #f1f1f1; */
-  background-color:  #8C1515;;
-  color: white;
-  padding: 2px;
+    padding: 0.125rem 0.375rem;
+    font-family: Consolas, "Courier New", monospace;
+    background-color: var(--color-accent);
+    color: #fff;
 }
 
-#TableOfContents ul {
-    margin: auto;
-    padding-left: 2%;
-    padding-top: 0%;
-}
 #TableOfContents {
     margin: auto;
 }
 
+#TableOfContents ul {
+    margin: auto;
+    padding-top: 0;
+    padding-left: 1.25rem;
+}
+
 .toc {
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    margin: 1.5rem 0;
 }
 
-.body {
-    margin: auto;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.h-100 {
-    margin: auto;
+.col {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.col-md-auto {
+    flex: 0 0 auto;
 }
 
 .w-100 {
-    margin: auto;
+    width: 100%;
 }
 
-.main_color  {
-    color: #8C1515;
+.h-100 {
+    height: 100%;
 }
 
-.secondary_color {
-    color: #071013;
+.d-flex {
+    display: flex;
 }
 
-.email_color {
-    color: #071013;
+.flex-column {
+    flex-direction: column;
 }
 
-.secondary_font {
-    font-family: 'Ubuntu Mono', serif;
+.flex-grow-1 {
+    flex-grow: 1;
 }
 
-.section-subtitle {
-    font-family: 'Ubuntu Mono', serif;
+.min-vh-100 {
+    min-height: 100vh;
 }
 
-#profile_picture  {
-    width: 20%;
-    height: auto;
-    margin-top: 1%;
+.mt-auto {
+    margin-top: auto;
 }
 
-.about #full_name {
-    font-size: x-large;
+.justify-content-center {
+    justify-content: center;
 }
 
-.about .affiliations #title {
-    padding-right: .5%;
+.justify-content-end {
+    justify-content: flex-end;
 }
 
-.about .affiliations #name {
-    padding-right: .5%;
-}   
-
-.about #email {
-    font-family: 'Ubuntu Mono', serif; 
-    margin: auto;
+.align-items-center {
+    align-items: center;
 }
 
-.about .socials {
-    font-size: small;
-    margin-bottom: 1%;
-    margin-top: 1%;
+.text-center {
+    text-align: center;
 }
 
-.about .socials a {
-    margin-left: .6%;
+.text-justify {
+    text-align: justify;
 }
 
-.about #blog_logo {
-    font-size: smaller;
-    margin-top: .2%;
+.text-muted {
+    color: var(--color-muted);
 }
 
-.about .academia .degree_major {
-    font-size: small;
+.small {
+    font-size: 0.875rem;
 }
 
-.about .academia .other_info {
-    font-size: small;
+.rounded {
+    border-radius: 0.375rem;
 }
 
-.course {
-    margin-top: 1%;
+.rounded-circle {
+    border-radius: 999px;
 }
 
-.news {
-    margin-top: 1.5%;
-}
-
-.news_list  {
-    padding: 0%;
-    list-style-type: none;
-}
-
-.news_list svg {
-    margin-right: .5%;
-}
-
-.news_icon i {
-    font-size: x-small;
-    color: #071013;
-}
-
-.publications .publication {
-    margin-top: 1.5%;
-}
-
-.publication .section-1 .publication-date {
-    font-family: 'Ubuntu Mono', serif;
-}
-
-.publication .section-1 .publication-name {
-    font-family: 'Ubuntu Mono', serif;
-}
-
-
-.publication .section-2 {
-    font-family: 'Ubuntu Mono', serif;
-    margin-top: -.1%;
-    margin-bottom: .5%;
-}
-
-
-.publication .section-3 {
-    margin-top: -.5%;
-    font-family: 'Ubuntu Mono', serif;
+.text-decoration-none {
     text-decoration: none;
 }
 
-.publication .section-3 a{
-    padding: .15%;
+.navbar-brand {
+    display: inline-block;
+    margin-right: 0.875rem;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
-.publication .section-3 a:hover {
-    transition-property: background-color;
-    transition-duration: .2s;
-    transition-timing-function: ease-in-out;
+.main_color {
+    color: var(--color-accent);
+}
 
-    border-radius: 50%;
-    background-color: #d64933;
-    color: white;
+.secondary_color,
+.email_color {
+    color: var(--color-text);
+}
+
+.secondary_font,
+.section-subtitle {
+    font-family: "Ubuntu Mono", serif;
+}
+
+#profile_picture {
+    width: min(12rem, 35vw);
+    height: auto;
+    margin-top: 1rem;
+    object-fit: cover;
+}
+
+.about {
+    row-gap: 1rem;
+}
+
+.about #full_name {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.about .affiliations #title,
+.about .affiliations #name {
+    padding-right: 0.5%;
+}
+
+.about #email {
+    margin: auto;
+    font-family: "Ubuntu Mono", serif;
+}
+
+.about .socials {
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+.about .socials a {
+    margin-left: 0.6rem;
+}
+
+.about #blog_logo {
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.interests,
+.academia {
+    flex: 1 1 18rem;
+}
+
+.about .academia .degree_major,
+.about .academia .other_info {
+    font-size: 0.95rem;
+}
+
+.institution_dates {
+    align-items: baseline;
+}
+
+.course {
+    margin-top: 1rem;
+}
+
+.news {
+    margin-top: 1.5rem;
+}
+
+.news_list {
+    padding: 0;
+    list-style: none;
+}
+
+.news_list li {
+    margin-bottom: 0.75rem;
+}
+
+.news_list svg {
+    margin-right: 0.5rem;
+    vertical-align: text-bottom;
+}
+
+.news_icon i {
+    font-size: 0.75rem;
+    color: var(--color-text);
+}
+
+.publications .publication,
+.projects .project {
+    margin-top: 1.5rem;
+}
+
+.publication .section-1 .publication-date,
+.publication .section-1 .publication-name,
+.publication .section-2,
+.publication .section-3,
+.projects .project a,
+.reading_time {
+    font-family: "Ubuntu Mono", serif;
+}
+
+.publication .section-2 {
+    margin-top: -0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.publication .section-3 {
+    margin-top: -0.5rem;
+}
+
+.publication .section-3 a,
+.projects .project .section-2 a {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+}
+
+.publication .section-3 a:hover,
+.projects .project .section-2 a:hover {
+    background-color: var(--color-accent-strong);
+    color: #fff;
+    text-decoration: none;
 }
 
 .publication .separator {
     margin-left: -1%;
 }
 
-.projects .project {
-    margin-top: 1.5%;
-}
-
-.project .section-2 a {
-    padding: .8%;
-    margin-left: -.1%;
-}
-
-.projects .project a{
-    font-family: 'Ubuntu Mono', serif;
-    padding: .15%;
-}
-.projects .project .section-2 a:hover {
-    transition-property: background-color;
-    transition-duration: .2s;
-    transition-timing-function: ease-in-out;
-
-    border-radius: 50%;
-    background-color: #d64933;
-    color: white;
-}
-
-
 .section-title {
-    margin-top: 2.5%;
-}
-
-.copy_right {
-    font-size: small;
-}
-.pagination {
-    margin: auto;
-}
-
-.pagination a  {
-    color: #8C1515;
-    size: 100%;
-}
-
-.pagination .page_link  {
-    font-weight: bold;
-    background-color: #8C1515;
-}
-
-.page-item.active .page-link {
-    border-color: black;
-    background-color: #8C1515;
-    font-weight: bold;
-    color: white;
+    margin-top: 2.5rem;
 }
 
 .tags_navigation {
-    margin-bottom: .5%;
+    margin-bottom: 0.75rem;
 }
 
 .tags_navigation .tag {
-    font-family: 'Ubuntu Mono', serif;
-    padding: .15%;
-    background-color: #8C1515;
+    display: inline-block;
+    margin: 0 0.35rem 0.35rem 0;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background-color: var(--color-accent);
     color: aliceblue;
-    padding-left: .5%;
-    padding-right: .5%;
+    font-family: "Ubuntu Mono", serif;
 }
 
 .tags_navigation .tag:hover {
-    text-decoration: underline;
+    color: #fff;
 }
 
 .blog_nav_bar {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 2.5rem 0;
 }
 
-.blog_nav_bar .item {
-    font-family: 'Ubuntu Mono', serif;
-    padding: .15%;
-    background-color: #8C1515;
-    color: aliceblue;
-    padding-left: .5%;
-    padding-right: .5%;
+.blog_nav_bar .navbar-brand {
+    font-family: "Ubuntu Mono", serif;
 }
 
 .reading_time {
-    font-family: 'Ubuntu Mono', serif;
-    margin-top: -.5%;
-    margin-bottom: 1%;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
 }
 
 .read_more {
-    margin-top: 1%;
+    margin-top: 1rem;
+}
+
+footer {
+    padding-top: 2rem;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding-left: 0;
+    margin: 2rem auto 0;
+    list-style: none;
+}
+
+.page-item {
+    list-style: none;
+}
+
+.page-link {
+    display: inline-block;
+    min-width: 2.5rem;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page-link:hover {
+    background: var(--surface-subtle);
+    text-decoration: none;
+}
+
+.page-item.active .page-link {
+    border-color: #000;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-weight: bold;
+}
+
+.page-item.disabled .page-link {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    body.container {
+        width: min(100% - 1.5rem, 72rem);
+        padding-top: 1rem;
+    }
+
+    .col,
+    .col-md-auto {
+        flex: 1 1 100%;
+    }
+
+    .blog_nav_bar {
+        margin: 2rem 0;
+    }
+
+    .institution_dates {
+        gap: 0.25rem;
+    }
+
+    #profile_picture {
+        width: min(14rem, 60vw);
+    }
 }

@@ -1,0 +1,58 @@
+{{ $section := . }}
+{{ $sectionPath := .Path }}
+{{ with .File }}
+{{ $sectionPath = .Path }}
+{{ end }}
+
+{{ $contentType := $section.Params.content_type }}
+{{ if not $contentType }}
+{{ errorf "home section %q is missing Params.content_type" $sectionPath }}
+{{ end }}
+
+{{ $sectionPartials := dict
+    "about" "about/about.html"
+    "news" "news/news.html"
+    "publications" "publications/publications.html"
+    "projects" "projects/projects.html"
+}}
+{{ $partialName := index $sectionPartials $contentType }}
+{{ if not $partialName }}
+{{ errorf "home section %q uses unsupported content_type %q" $sectionPath $contentType }}
+{{ end }}
+
+{{ $contentPage := .Site.GetPage $contentType }}
+{{ if not $contentPage }}
+{{ errorf "home section %q points to missing content page %q" $sectionPath $contentType }}
+{{ end }}
+
+{{ $title := $section.Params.title }}
+{{ with $section.Params.section_settings.title }}
+{{ $title = . }}
+{{ end }}
+
+{{ $subtitle := "" }}
+{{ with $section.Params.section_settings.subtitle }}
+{{ $subtitle = . }}
+{{ end }}
+
+{{ if or $title (eq $contentType "about") }}
+<div class="row w-100">
+    <div class="col w-100">
+        {{ if or $title $subtitle }}
+        <div class="row w-100">
+            <div class="col w-100">
+                {{ if $title }}
+                <h3 class="row w-100 section-title main_color">{{ $title }}</h3>
+                {{ end }}
+
+                {{ if $subtitle }}
+                <h6 class="row w-100 section-subtitle text-muted">{{ $subtitle }}</h6>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+
+        {{ partial $partialName $section }}
+    </div>
+</div>
+{{ end }}
