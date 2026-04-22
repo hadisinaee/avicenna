@@ -2,48 +2,13 @@
 
 {{ $headlessPage := .Site.GetPage "/home" }}
 
-{{ range where ($headlessPage.Resources.ByType "page") "Params.section_settings.show_section" true}}
-
-{{ $content_type := .Params.content_type }}
-{{ if not $content_type }}
-NO CONTENT TYPE FOUND. Set content_type = "{{.Params.title | lower }}"
+{{ if not $headlessPage }}
+{{ errorf "missing headless home page bundle at content/home" }}
 {{ end }}
 
-{{ $title := .Params.title }}
-{{ if .Params.section_settings.title }}
-{{ $title = .Params.section_settings.title }}
+{{ range where ($headlessPage.Resources.ByType "page") "Params.section_settings.show_section" true }}
+{{- partial "core/render_home_section.html" . -}}
 {{ end }}
-
-{{ $subtitle := "" }}
-{{ if .Params.section_settings.subtitle }}
-{{ $subtitle = .Params.section_settings.subtitle }}
-{{ end }}
-
-{{ if or $title (eq $content_type "about")}}
-<div class="row w-100">
-    <div class="col w-100">
-        {{if or $title $subtitle}}
-        <div class="row w-100">
-            <div class="col w-100">
-                {{if $title }}
-                <h3 class="row  w-100 section-title main_color"> {{ $title }} </h3>
-                {{ end }}
-
-                {{ if $subtitle}}
-                <h6 class="row w-100 section-subtitle  text-muted"> {{ $subtitle }} </h6>
-                {{end}}
-            </div>
-        </div>
-        {{end}}
-
-        {{- partial (printf "%s/%s.html" $content_type $content_type) . -}}
-    </div>
-</div>
-
-{{end}}
-
-<!-- this is for range -->
-{{end}}
 
 <!-- this is for block -->
 {{end}}

@@ -16,7 +16,7 @@
 {{ if .Params.tags }}
 <div class="tags_navigation">
     {{ range .Params.tags }}
-    <a class="tag" href="/tags/{{ . }}/">#{{ . }}</a>
+    <a class="tag" href="{{ (printf "tags/%s/" (. | urlize)) | relURL }}">#{{ . }}</a>
     {{ end }}
 </div>
 {{ end }}

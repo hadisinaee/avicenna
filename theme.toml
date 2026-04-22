@@ -6,7 +6,7 @@ features = ["Academic", "Responsive", "Clean And Minimal", "Social Media Links"]
 homepage = "https://github.com/hadisinaee/avicenna"
 license = "MIT"
 licenselink = "https://github.com/hadisinaee/avicenna/blob/master/LICENSE"
-min_version = "0.41"
+min_version = "0.160.0"
 name = "Avicenna"
 tags = ["academic", "personal", "minimal", "minimalist", "clean", "responsive", "simple", "university"]
 
