@@ -1,0 +1,39 @@
+baseURL = 'https://example.org/'
+locale = 'en-US'
+title = 'Alex Morgan'
+
+[module]
+[[module.imports]]
+path = 'github.com/hadisinaee/avicenna'
+
+[pagination]
+pagerSize = 10
+
+[markup.highlight]
+style = 'github'
+
+[params]
+description = 'Systems researcher and software engineer.'
+wordmark = 'avicenna.'
+tagline = 'A place for thoughtful work'
+
+[params.appearance]
+primaryFont = 'source-sans'
+secondaryFont = 'maple-mono'
+theme = 'cardinal'
+
+[params.profile]
+name = 'Alex Morgan'
+role = 'Systems researcher'
+location = 'Vancouver, Canada'
+image = 'images/profile.svg'
+
+[[params.social]]
+name = 'Email'
+url = 'mailto:alex@example.org'
+[[params.social]]
+name = 'GitHub'
+url = 'https://github.com/'
+[[params.social]]
+name = 'Scholar'
+url = 'https://scholar.google.com/'

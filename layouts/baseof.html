@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+<head>{{ partial "head.html" . }}</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+  <header class="top"><a class="wordmark" href="{{ site.Home.RelPermalink }}">{{ site.Params.wordmark | default "avicenna." }}</a>{{ with site.Params.tagline }}<span class="eyebrow">{{ . }}</span>{{ end }}</header>
+  <div class="layout">
+    {{ partial "sidebar.html" . }}
+    <main id="main">{{ block "main" . }}{{ end }}</main>
+  </div>
+  <footer><span>© {{ now.Year }} {{ site.Params.profile.name | default site.Title }}</span><span>Powered by <a href="https://gohugo.io/">Hugo</a> · Avicenna</span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{{ define "main" }}
+<header class="page-heading"><span class="eyebrow">{{ site.Title }}</span><h1>{{ .Title }}</h1><div class="prose">{{ .Content }}</div></header>
+{{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) }}
+{{ range $paginator.Pages }}{{ partial "entry.html" . }}{{ end }}
+{{ template "_internal/pagination.html" . }}
+{{ end }}

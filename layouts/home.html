@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="intro" id="about">
+  {{ with .Params.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+  <h1>{{ site.Params.profile.name | default .Title }}</h1>
+  {{ with .Params.intro }}<p class="lead">{{ . }}</p>{{ end }}
+  <div class="prose">{{ .Content }}</div>
+  {{ with .Params.interests }}<ul class="topics">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+</section>
+{{ range slice "publications" "projects" "news" "blog" }}
+  {{ with site.GetPage . }}{{ if .RegularPages }}
+  <section id="{{ .Section }}">
+    <div class="heading"><h2>{{ .Title }}</h2><a class="small-link" href="{{ .RelPermalink }}">View all ↗</a></div>
+    <div class="entries entries--{{ .Section }}">{{ range first 3 (.RegularPages.ByDate.Reverse) }}{{ partial "entry.html" . }}{{ end }}</div>
+  </section>
+  {{ end }}{{ end }}
+{{ end }}
+{{ end }}
