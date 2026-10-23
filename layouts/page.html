@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article>
+  <header class="page-heading">{{ with .Parent }}<a class="small-link" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}<h1>{{ .Title }}</h1><p class="meta mono"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>{{ if eq .Section "blog" }} · {{ .ReadingTime }} min read{{ end }}</p>
+  {{ with .Params.authors }}<p class="meta">{{ delimit . ", " }}</p>{{ end }}{{ with .Params.venue }}<p class="meta">{{ . }}</p>{{ end }}
+  {{ with .Params.links }}<div class="resource">{{ range . }}<a href="{{ .url }}">{{ .name }} ↗</a>{{ end }}</div>{{ end }}
+  </header>
+  {{ if .Params.toc }}{{ if .Fragments.Headings }}<details class="toc"><summary>On this page</summary>{{ .TableOfContents }}</details>{{ end }}{{ end }}
+  <div class="prose">{{ .Content }}</div>
+  {{ with .GetTerms "tags" }}<ul class="tags">{{ range . }}<li><a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a></li>{{ end }}</ul>{{ end }}
+</article>
+{{ end }}

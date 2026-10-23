@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
+<meta name="description" content="{{ .Description | default site.Params.description | default site.Title }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ range .AlternativeOutputFormats }}<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }} — {{ .Name }}">{{ end }}
+{{ partial "appearance.html" . }}
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ with resources.Get "css/custom.css" }}{{ $custom := . | minify | fingerprint }}<link rel="stylesheet" href="{{ $custom.RelPermalink }}" integrity="{{ $custom.Data.Integrity }}">{{ end }}
+{{ template "_internal/opengraph.html" . }}

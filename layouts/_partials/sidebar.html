@@ -1,0 +1,14 @@
+{{ $current := . }}
+<aside aria-label="Profile and navigation">
+  {{ with site.Params.profile }}
+  {{ with .image }}<img class="portrait" src="{{ . | relURL }}" alt="{{ site.Params.profile.name }}" width="84" height="100">{{ end }}
+  <div class="identity"><strong>{{ .name }}</strong>{{ with .role }}<p>{{ . }}</p>{{ end }}{{ with .location }}<p>{{ . }}</p>{{ end }}</div>
+  {{ end }}
+  <nav class="nav" aria-label="Main navigation">
+    <a href="{{ site.Home.RelPermalink }}#about"{{ if .IsHome }} aria-current="page"{{ end }}>About</a>
+    {{ range slice "publications" "projects" "news" "blog" }}
+      {{ with site.GetPage . }}{{ if .RegularPages }}<a href="{{ if $current.IsHome }}#{{ .Section }}{{ else }}{{ .RelPermalink }}{{ end }}"{{ if eq $current.Section .Section }} aria-current="page"{{ end }}>{{ .Title }}</a>{{ end }}{{ end }}
+    {{ end }}
+  </nav>
+  <div class="contact">{{ range site.Params.social }}<a href="{{ .url }}">{{ .name }} ↗</a>{{ end }}{{ with site.Params.profile.cv }}<a href="{{ . | relURL }}">CV ↗</a>{{ end }}</div>
+</aside>

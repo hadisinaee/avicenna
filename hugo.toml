@@ -1,0 +1,10 @@
+[module.hugoVersion]
+min = '0.168.0'
+
+[params.appearance]
+primaryFont = 'source-sans'
+secondaryFont = 'maple-mono'
+theme = 'cardinal'
+
+[taxonomies]
+tag = 'tags'

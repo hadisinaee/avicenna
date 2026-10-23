@@ -1,0 +1,19 @@
+{{ if eq .Section "blog" }}
+<a class="post-link" href="{{ .RelPermalink }}"><span>{{ .Title }} ↗</span><small><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02" }}</time> · {{ .ReadingTime }} min</small></a>
+{{ else if eq .Section "news" }}
+<article class="news">
+  <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+  <div><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }}<p class="summary">{{ . }}</p>{{ end }}</div>
+</article>
+{{ else }}
+<article class="entry entry--{{ .Section }}">
+  <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ if eq .Section "publications" }}{{ .Date.Format "2006" }}{{ else }}{{ .Date.Format "Jan 2006" }}{{ end }}</time>
+  <div>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.authors }}<p class="meta">{{ delimit . ", " }}</p>{{ end }}
+    {{ with .Params.venue }}<p class="meta">{{ . }}</p>{{ end }}
+    {{ if eq .Section "projects" }}{{ with .Description }}<p class="summary">{{ . }}</p>{{ end }}{{ end }}
+    {{ with .Params.links }}<div class="resource">{{ range . }}<a href="{{ .url }}">{{ .name }} ↗</a>{{ end }}</div>{{ end }}
+  </div>
+</article>
+{{ end }}
