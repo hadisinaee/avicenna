@@ -414,7 +414,6 @@ footer {
   footer {
     flex-wrap:wrap
   }
-}
   .entry--publications {
     grid-template-columns:44px minmax(0,1fr)
   }
@@ -424,6 +423,7 @@ footer {
   .post-link small {
     font-size:10px
   }
+}
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto
